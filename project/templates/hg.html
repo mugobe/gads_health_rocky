@@ -1,0 +1,12 @@
+{% extends 'layouts.html' %}
+
+{% block body %}
+
+<br></br><br></br>
+{% for x in response.data %}
+<p>{{ x.employee_name }}
+</p>
+{% endfor %}
+<br></br>
+
+{% endblock %}
