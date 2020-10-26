@@ -67,13 +67,31 @@
           <div class="col-lg-8 col-md-7 ">
 
             <div class="row">
-                {% for x in news_categories %}
+                
               <div class="col-lg-6 col-md-6 box wow fadeInRight">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                <h4 class="title"><a href="">{{ x.title }}</a></h4>
-                <p class="description"> {{ x.description }}</p>
+                <h4 class="title"><a href="">Coronavirus Updates</a></h4>
+                <p class="description"> {{description }}</p>
               </div>
-                {% endfor %}
+
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <h4 class="title"><a href="{{ url_for('world_health_news') }}">World Health News</a></h4>
+                <p class="description"> {{description }}</p>
+              </div>
+
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <h4 class="title"><a href="">Nigeria </a></h4>
+                <p class="description"> {{description }}</p>
+              </div>
+
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <h4 class="title"><a href="">South Africa</a></h4>
+                <p class="description"> {{description }}</p>
+              </div>
+           
             </div>
 
           </div>

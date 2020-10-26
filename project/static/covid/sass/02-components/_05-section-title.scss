@@ -1,0 +1,21 @@
+/* ************************
+   02.5: Section Title
+   ********************* */
+.section-title {
+    span {
+        @extend %title_font;
+        font-weight: $semi-bold;
+        font-size: 16px;
+        @extend %c1;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        line-height: 1;
+        display: block;
+        margin-bottom: 22px;
+    }
+    h2 {
+        font-weight: $medium;
+        font-size: 42px;
+    }
+}

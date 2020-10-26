@@ -1,0 +1,43 @@
+/* ************************
+   02.6: Features
+   ********************* */
+.single-symptoms {
+    &:not(:last-child) {
+        padding-right: 35px;
+        margin-right: 35px;
+        border-right: 1px solid rgba($text_light, $alpha: .15);
+        @include mobileMd {
+            border-right: 0;
+            border-bottom: 1px solid rgba($text_light, $alpha: .15);
+            padding-right: 0;
+            margin-right: 0;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    .icon {
+        margin-right: 12px;
+    }
+    p {
+        max-width: 70px;
+        line-height: 20px;
+        @include mobileMd {
+            max-width: 100%;
+        }
+    }
+}
+
+.single-prevention {
+    .content {
+        p {
+            font-size: 21px;
+            font-weight: $extra-bold;
+            line-height: 26px;
+            @include tab {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

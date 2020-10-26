@@ -1,0 +1,44 @@
+/* ************************
+   03.5: Footer
+   ********************* */
+//Top
+.footer-top {
+  padding: 35px 0;
+  border-bottom: 1px solid rgba($color: $white, $alpha: 0.25);
+}
+
+//Main
+.footer-main {
+  padding: 80px 0 50px;
+  .widget {
+    margin-bottom: 30px;
+    .widget-title {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+//Bottom
+.footer-bottom {
+  background-color: #07002b;
+  padding: 26px 0;
+}
+
+//Menu
+.footer-menu {
+  li {
+    &:not(:last-child) {
+      &:after {
+        margin: 0 20px;
+        content: "|";
+        color: $white;
+      }
+    }
+    a {
+      color: $white;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

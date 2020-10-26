@@ -4,8 +4,18 @@
 
 <br></br><br></br>
 
-<p>{{ response.text }}
-</p>
+
+<ul>
+
+    {% for article in data %}
+
+
+<li>
+    {{ article.title }}
+</li>
+
+    {% endfor %}
+</ul>
 
 <br></br>
 

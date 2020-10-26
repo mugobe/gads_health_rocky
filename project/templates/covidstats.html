@@ -1,0 +1,145 @@
+{% extends 'covid_layout.html' %}
+
+{% block body %}
+<br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br>
+<main class="wrapper" id="home">
+    <!-- Preloader -->
+    <div class="preloader w-100 h-100 position-fixed bg-white">
+        <img src="static/covid/img/preloader.png" alt="">
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-fixed">
+            <div class="container">
+                <div class="row no-gutters align-items-center position-relative">
+                    <div class="col-lg-2 col-sm-4 col-5">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="static/covid/img/logo.png" alt="" />
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <div class="col-lg-8 col-sm-4 col-4 position-static">
+                        <!-- Main Menu -->
+                        <div
+                            class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
+                            <!-- Nav -->
+                            <ul class="nav align-items-center onPageNav">
+                                <li>
+                                    <a href="#home">Health Topics</a>
+                                </li>
+                                <li>
+                                    <a href="#countries">Countries</a>
+                                </li>
+                                <li>
+                                    <a href="#dataTable">Data Table</a>
+                                </li>
+                                <li><a href="#coronaTest">Online Test</a></li>
+
+                                <li>
+                                    <a href="#">Pages</a>
+
+                                    <ul class="sub-menu">
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- End Nav -->
+                        </div>
+                        <!-- End Main Menu -->
+                    </div>
+
+                    <div class="col-lg-2 col-sm-4 col-3 text-right">
+                        <a href="#" class="btn header-btn">
+                            <span class="icon d-sm-none">
+                                <img src="static/covid/img/icon/sick.svg" class="svg" alt="">
+                            </span>
+                            <span class="d-none d-sm-block">are you sick?</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+  <!-- Live Update -->
+  <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="corona-live-update top-50" data-bg-img="static/covid/img/pattern.png">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-lg">
+                            <div
+                                class="live-update-title d-flex flex-column align-items-center justify-content-center p-20">
+                                <h2 class="d-inline-flex align-items-center">
+                                    <span>Live</span>
+                                    <span>update</span> </h2>
+                                <span>world update</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg">
+                            <!-- Corona Update -->
+                            <div id="coronaUpdate" class="corona-update row no-gutters">
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class="cuTotal">&nbsp;</h2>
+                                    <span>Confirmed</span>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class="cuRecovered">&nbsp;</h2>
+                                    <span>Recovered</span>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class="cuDeaths">&nbsp;</h2>
+                                    <span>Total Deaths</span>
+                                </div>
+                                <!-- End Info -->
+
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class="cuContries">&nbsp;</h2>
+                                    <span>Countries</span>
+                                </div>
+                                <!-- End Info -->
+                            </div>
+                            <!-- End Corona Update -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Live Update -->
+
+<br></br><br></br>
+
+
+<p>
+</p>
+
+<br></br>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page Title -->
+    <title>covidstatics</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <!-- Web Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet" />
+
+    <!-- ======= Magnific Popup CSS ======= -->
+    <link rel="stylesheet" href="static/covid/plugins/magnific-popup/magnific-popup.min.css">
+
+    <!-- ======= Data Tables CSS ======= -->
+    <link rel="stylesheet" type="text/css" href="static/covid/plugins/data-tables/datatables.min.css" />
+
+    <!-- ======= Main Stylesheet ======= -->
+    <link rel="stylesheet" href="static/covid/css/style.css" />
+
+    <!-- ======= Custom Stylesheet ======= -->
+    <link rel="stylesheet" href="static/covid/css/custom.css" />
+</head>
+
+<body>
+
+    <main class="wrapper" id="home">
+        <!-- Preloader -->
+        <div class="preloader w-100 h-100 position-fixed bg-white">
+            <img src="assets/img/preloader.png" alt="">
+        </div>
+    {% include 'includes/covid_nav.html' %}
+
+
+    {% block body %}
+    
+
+
+    {% endblock %}
+
+    {% include 'includes/covid_footer.html' %}
+  
+    </body>
+
+    
+    </html>>

@@ -1,21 +1,19 @@
 from flask import Flask, render_template
 from flask_restful import Resource, Api
 from flask_cors import CORS
+import xmltodict
+
+import json, xmljson
+from lxml.etree import fromstring, tostring
+
 import requests
+
  
 
 
 
 app = Flask(__name__)
 CORS(app) ## To allow direct AJAX calls
-
-
-
-headers = {
-    'x-rapidapi-host': "getguidelines.p.rapidapi.com",
-    'x-rapidapi-key': "4530cb2b74msh6b53c3be454b827p188292jsn9e5ec4781425"
-    }
-
 
 
 # home page route and view
@@ -52,51 +50,63 @@ def Index():
 
     return render_template('home.html', news_categories=category)
 
-# #news categories
-# @app.route('/heath_news_categoris')
-# def Categories():
-#     category = [
-#             {
-#                 'id':1,
-#                 'title': 'Coronavirus'
-#                 'description': "Find answers to questions about novel coronavirus (2019-nCoV), including disease basics, prevention, travel, and 2019-nCoV and animals information."
-#             }
-
-#     ]
-
 # news list route and view
-@app.route('/healthnews')
-def News():
-    return render_template('news.html')
+# @app.route('/healthnews')
+# def News():
+#     return render_template('news.html')
+
+# # @app.route('/articles')
+# # def articles():
+# #     return render_template('articles.html', articles=Articles)
 
 
-#Health guidelines 
 
-#get all guidelines
-# @app.route('/healthguidelines')
-# def HealthGuidelines():
-#     url = "https://rapidapi.p.rapidapi.comhttps//getguidelines.com/all"
 
-#     response = requests.request("GET", url, headers=headers)
-
-#     return render_template('hg.html', response )              
+            
 
 @app.route('/healthguidelines', methods=['GET'])
 def home():
     r = requests.get('http://dummy.restapiexample.com/api/v1/employees')
     
-    response = r.json()
+    response = r
 
     return render_template('hg.html', response = response )  
 
 
-@app.route('/cdc', methods=['GET'])
-def cdc():
-    r = requests.get('http://data.cdc.gov/')
+@app.route('/worldhealthnews', methods=['GET'])
+def world_health_news():
+    r = requests.get('http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=db0dbc6d89ae4a8583fb8c71a49deb8b').json()
     
-    response = r
+    data = r.get('articles')
 
-    return render_template('cdc.html', response = response )  
+    return render_template('news.html', data = data )  
+
+
+@app.route('/who')
+def who():
+    data = requests.get('https://www.who.int/rss-feeds/news-english.xml').json()
+
+    
+
+    
+    data = data.get(link)
+    json.dumps(xmljson.badgerfish.data(data))
+
+    # data = xmltodict.parse(data)
+
+    return render_template('who.html', data = data)
+
+
+
+
+
+@app.route('/covidstats', methods=['GET'])
+def covid_stats():
+    r = requests.get('https://api.covid19api.com/stats').json()
+    
+    data = r
+
+    return render_template('covidstats.html', data = data )  
 
 if __name__ == '__main__':
     app.run(debug=True)

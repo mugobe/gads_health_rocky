@@ -1,0 +1,57 @@
+/* ************************
+   04.1: Symptoms
+   ********************* */
+.symptoms-wrapper {
+    figure {
+        width: 158px;
+        height: 718px;
+    }
+    .card-wrapper {
+        @include customMin(1200) {
+            padding-left: 100px;
+        
+            .card {
+                position: relative;
+                .card-body {
+                    position: relative;
+                    z-index: 2;
+                    background-color: $white;
+                }
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: '';
+                }
+                &:before {
+                    right: 100%;
+                    top: 50%;
+                    background-color: #E8EBF3;
+                    height: 5px;
+                    width: 100px;
+                    transform: translateY(-50%);
+                }
+                &:after {
+                    height: 20px;
+                    width: 20px;
+                    background-color: $c1;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                }
+                &:nth-child(1) {
+                    &:before {
+                        width: 145px;
+                    }
+                }
+                &:nth-child(3) {
+                    &:before {
+                        width: 140px;
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/* ************************
+   03.6: Page Title
+   ********************* */
+/* ************************
+   02.9: Page Title
+   ********************* */
+.page-title-wrap {
+  padding: 185px 0 100px;
+}
+.page-title {
+  h2 {
+    font-size: 36px;
+    font-weight: $bold;
+  }
+  ul {
+    li {
+      a {
+        color: inherit;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      &:not(:last-child) {
+        position: relative;
+        &:after {
+          content: ">";
+          margin: 10px;
+        }
+      }
+    }
+  }
+}

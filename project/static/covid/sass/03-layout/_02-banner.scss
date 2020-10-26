@@ -1,0 +1,63 @@
+/* ************************
+   03.2: Banner
+   ********************* */
+.banner {
+    min-height: 960px;
+    background-size: cover;
+    background-position: center;
+    .banner-content {
+        @include customMin(992) {
+            padding: 287px 0 413px;
+        }
+        h1 {
+            font-size: 52px;
+            line-height: calc(65 / 52);
+            font-weight: $semi-bold;
+            color: $white;
+            margin-bottom: 38px;
+            @include mobileLg {
+                font-size: 42px;
+                margin-bottom: 30px;
+            }
+            @include mobileSm {
+                font-size: 30px;
+            }
+        }
+        p {
+            color: $white; 
+            font-size: 22px;
+            font-weight: $light;
+            line-height: 33px;
+            max-width: 970px;
+            @include mobileLg {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .banner-btn-group {
+        .btn {
+            margin-top: 15px;
+            padding: 21.5px 32px;
+            &:not(:last-child) {
+                margin-right: 11px;
+            }
+        }
+    }
+    &.text-center {
+        .banner-content {
+            p {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    &.text-right {
+        .banner-content {
+            p {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
