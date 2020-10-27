@@ -82,19 +82,30 @@ def world_health_news():
     return render_template('news.html', data = data )  
 
 
-@app.route('/who')
-def who():
-    data = requests.get('https://www.who.int/rss-feeds/news-english.xml').json()
+@app.route('/nigeria_news')
+def nigeria_news():
+    data = requests.get('http://newsapi.org/v2/top-headlines?country=ng&category=health&apiKey=db0dbc6d89ae4a8583fb8c71a49deb8b').json()
 
     
 
     
-    data = data.get(link)
-    json.dumps(xmljson.badgerfish.data(data))
+    data = data.get('articles')
 
-    # data = xmltodict.parse(data)
+    return render_template('nigeria_news.html', data = data )  
 
-    return render_template('who.html', data = data)
+   
+@app.route('/sa_news')
+def sa_news():
+    data = requests.get('http://newsapi.org/v2/top-headlines?country=za&category=health&apiKey=db0dbc6d89ae4a8583fb8c71a49deb8b').json()
+
+    
+
+    
+    data = data.get('articles')
+
+    return render_template('sa_news.html', data = data )  
+
+   
 
 
 
@@ -102,11 +113,17 @@ def who():
 
 @app.route('/covidstats', methods=['GET'])
 def covid_stats():
-    r = requests.get('https://api.covid19api.com/stats').json()
-    
+    r = requests.get('https://api.covid19api.com/summary').json()
+    south_live = requests.get('https://api.covid19api.com/total/country/south-africa').json()
+    uganda_live = requests.get('https://api.covid19api.com/total/country/uganda').json()
+    nigeria_live = requests.get('https://api.covid19api.com/total/country/nigeria').json()
+                                
     data = r
+    south_data = south_live
+    uganda_data = uganda_live
+    nigeria_data = nigeria_live
 
-    return render_template('covidstats.html', data = data )  
+    return render_template('covidstats.html', data = data, south_data = south_data, uganda_data = uganda_live, nigeria_data =nigeria_live )  
 
 if __name__ == '__main__':
     app.run(debug=True)

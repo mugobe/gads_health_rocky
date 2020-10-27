@@ -94,7 +94,7 @@
                                 <!-- Info -->
                                 <div
                                     class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
-                                    <h2 class="cuTotal">&nbsp;</h2>
+                                    <h2 class=""> {{ data.Global.TotalConfirmed }}  &nbsp; </h2>
                                     <span>Confirmed</span>
                                 </div>
                                 <!-- End Info -->
@@ -102,7 +102,7 @@
                                 <!-- Info -->
                                 <div
                                     class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
-                                    <h2 class="cuRecovered">&nbsp;</h2>
+                                    <h2 class=""> {{ data.Global.TotalRecovered}}  &nbsp; </h2>
                                     <span>Recovered</span>
                                 </div>
                                 <!-- End Info -->
@@ -110,7 +110,7 @@
                                 <!-- Info -->
                                 <div
                                     class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
-                                    <h2 class="cuDeaths">&nbsp;</h2>
+                                    <h2 class=""> {{ data.Global.TotalDeaths }}  &nbsp;</h2>
                                     <span>Total Deaths</span>
                                 </div>
                                 <!-- End Info -->
@@ -119,8 +119,8 @@
                                 <!-- Info -->
                                 <div
                                     class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
-                                    <h2 class="cuContries">&nbsp;</h2>
-                                    <span>Countries</span>
+                                    <h2 class=""> {{ data.Global.NewDeaths }}  &nbsp;</h2>
+                                    <span>New Deaths</span>
                                 </div>
                                 <!-- End Info -->
                             </div>
@@ -130,8 +130,198 @@
                 </div>
             </div>
         </div>
+<br><br><br><br><br><br>
+        <div class="row">
+            <div class="col-12">
+                <div class="corona-live-update top-50" data-bg-img="static/covid/img/pattern.png">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-lg">
+                            <div
+                                class="live-update-title d-flex flex-column align-items-center justify-content-center p-20">
+                                <h2 class="d-inline-flex align-items-center">
+                                    <span>Live</span>
+                                    <span>update</span> </h2>
+                                <span>{{ uganda_data[-1].Country}} </span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg">
+                            <!-- Corona Update -->
+                        
+                            <div id="coronaUpdate" class="corona-update row no-gutters">
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ uganda_data[-1].Confirmed}}  &nbsp; </h2>
+                                    <span>Confirmed</span>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ uganda_data[-1].Recovered}}  &nbsp; </h2>
+                                    <span>Recovered</span>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ uganda_data[-1].Deaths}} &nbsp;</h2>
+                                    <span>Total Deaths</span>
+                                </div>
+                                <!-- End Info -->
+
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ uganda_data[-1].Active}}  &nbsp;</h2>
+                                    <span>Active Cases</span>
+                                </div>
+                                <!-- End Info -->
+                            </div>
+
+                           
+
+                            <!-- End Corona Update -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
+        <div class="row">
+            <div class="col-12">
+                <div class="corona-live-update top-50" data-bg-img="static/covid/img/pattern.png">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-lg">
+                            <div
+                                class="live-update-title d-flex flex-column align-items-center justify-content-center p-20">
+                                <h2 class="d-inline-flex align-items-center">
+                                    <span>Live</span>
+                                    <span>update</span> </h2>
+                                <span>{{ south_data[18].Country}} </span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg">
+                            <!-- Corona Update -->
+                        
+                            <div id="coronaUpdate" class="corona-update row no-gutters">
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ south_data[-1].Confirmed}}  &nbsp; </h2>
+                                    <span>Confirmed</span>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ south_data[-1].Recovered}}  &nbsp; </h2>
+                                    <span>Recovered</span>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ south_data[-1].Deaths}} &nbsp;</h2>
+                                    <span>Total Deaths</span>
+                                </div>
+                                <!-- End Info -->
+
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ south_data[-1].Active}}  &nbsp;</h2>
+                                    <span>Active Cases</span>
+                                </div>
+                                <!-- End Info -->
+                            </div>
+
+                           
+
+                            <!-- End Corona Update -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <br><br><br><br><br><br>
+        <div class="row">
+            <div class="col-12">
+                <div class="corona-live-update top-50" data-bg-img="static/covid/img/pattern.png">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-lg">
+                            <div
+                                class="live-update-title d-flex flex-column align-items-center justify-content-center p-20">
+                                <h2 class="d-inline-flex align-items-center">
+                                    <span>Live</span>
+                                    <span>update</span> </h2>
+                                <span>{{ nigeria_data[-1].Country}} </span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg">
+                            <!-- Corona Update -->
+                        
+                            <div id="coronaUpdate" class="corona-update row no-gutters">
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ nigeria_data[-1].Confirmed}}  &nbsp; </h2>
+                                    <span>Confirmed</span>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ nigeria_data[-1].Recovered}}  &nbsp; </h2>
+                                    <span>Recovered</span>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ nigeria_data[-1].Deaths}} &nbsp;</h2>
+                                    <span>Total Deaths</span>
+                                </div>
+                                <!-- End Info -->
+
+
+                                <!-- Info -->
+                                <div
+                                    class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
+                                    <h2 class=""> {{ nigeria_data[-1].Active}}  &nbsp;</h2>
+                                    <span>Active Cases</span>
+                                </div>
+                                <!-- End Info -->
+                            </div>
+
+                           
+
+                            <!-- End Corona Update -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
+<!-- End Live Update -->
+
+
+
 <!-- End Live Update -->
 
 <br></br><br></br>
