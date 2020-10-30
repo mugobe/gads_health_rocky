@@ -1,74 +1,34 @@
 {% extends 'covid_layout.html' %}
 
 {% block body %}
-<br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br>
+
 <main class="wrapper" id="home">
     <!-- Preloader -->
-    <div class="preloader w-100 h-100 position-fixed bg-white">
-        <img src="static/covid/img/preloader.png" alt="">
-    </div>
+    
     <!-- End Preloader -->
 
-    <!-- Header -->
-    <header class="header">
-        <div class="header-fixed">
-            <div class="container">
-                <div class="row no-gutters align-items-center position-relative">
-                    <div class="col-lg-2 col-sm-4 col-5">
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="static/covid/img/logo.png" alt="" />
-                            </a>
+    <section class="banner d-flex align-items-center justify-content-center" data-bg-img="static/covid/img/world-update.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Banner Content -->
+                    <div class="text-center">
+                        <h1>Coronavirus disease (COVID-19) outbreak</h1>
+                        <p style="color:black"  class="ml-auto mr-auto ">Most people infected with the COVID-19 virus will experience mild to moderate respiratory
+                            illness and requiring special treatment. Older people, and those with underlying medical
+                            problems
+                        </p>
+
+                        <div class="banner-btn-group">
+                            <a href="{{ url_for('Index') }}" class="btn">Go Back TO Health News</a>
+                           
                         </div>
-                        <!-- End Logo -->
                     </div>
-
-                    <div class="col-lg-8 col-sm-4 col-4 position-static">
-                        <!-- Main Menu -->
-                        <div
-                            class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
-                            <!-- Nav -->
-                            <ul class="nav align-items-center onPageNav">
-                                <li>
-                                    <a href="#home">Health Topics</a>
-                                </li>
-                                <li>
-                                    <a href="#countries">Countries</a>
-                                </li>
-                                <li>
-                                    <a href="#dataTable">Data Table</a>
-                                </li>
-                                <li><a href="#coronaTest">Online Test</a></li>
-
-                                <li>
-                                    <a href="#">Pages</a>
-
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li><a href="404.html">404</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <!-- End Nav -->
-                        </div>
-                        <!-- End Main Menu -->
-                    </div>
-
-                    <div class="col-lg-2 col-sm-4 col-3 text-right">
-                        <a href="#" class="btn header-btn">
-                            <span class="icon d-sm-none">
-                                <img src="static/covid/img/icon/sick.svg" class="svg" alt="">
-                            </span>
-                            <span class="d-none d-sm-block">are you sick?</span>
-                        </a>
-                    </div>
+                    <!-- End Banner Content -->
                 </div>
             </div>
         </div>
-    </header>
-    <!-- End Header -->
+    </section>
 
 
   <!-- Live Update -->

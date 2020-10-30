@@ -8,7 +8,7 @@
     <div class="intro-text">
       <h2>Welcome to Health Rocky</h2>
       <p>Worlds Fastest Health News Agregator</p>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      <a href="#about" class="btn-get-started scrollto">About Us</a>
     </div>
 
     <div class="product-screens">
@@ -33,13 +33,15 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="section-bg">
-      <div class="container-fluid">
+      <div class="container-fluid ">
         <div class="section-header">
-          <h3 class="section-title">About Us</h3>
+          <h3 class="section-title">About</h3>
           <span class="section-divider"></span>
-          <p class="section-description">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<br>
-            sunt in culpa qui officia deserunt mollit anim id est laborum
+          <p class="section-description text-center">
+          WE aggregate Medical health  news from credible and established medical news outlets from all over  the world
+              , providing you with fast hand information thats updated every second that counts, trust us with providing you the shortest route to your world 
+              of medical science information delivered at the glimpse, we are not a health news blog, but a First hand Health news aggregator and thats what makes us
+              special for you.
           </p>
         </div>
 
@@ -55,7 +57,7 @@
 
           <div class="col-lg-8 offset-lg-4">
             <div class="section-header wow fadeIn" data-wow-duration="1s">
-              <h3 class="section-title">Product Featuress</h3>
+              <h3 class="section-title">Health News Categores</h3>
               <span class="section-divider"></span>
             </div>
           </div>
@@ -70,26 +72,26 @@
                 
               <div class="col-lg-6 col-md-6 box wow fadeInRight">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                <h4 class="title"><a href="">Coronavirus Updates</a></h4>
-                <p class="description"> {{description }}</p>
+                <h4 class="title"><a href="{{ url_for('covid_stats') }}">{{ news_categories[0].title }}</a></h4>
+                <p class="description">{{ news_categories[0].description }} </p>
               </div>
 
               <div class="col-lg-6 col-md-6 box wow fadeInRight">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                <h4 class="title"><a href="{{ url_for('world_health_news') }}">World Health News</a></h4>
-                <p class="description"> {{description }}</p>
+                <h4 class="title"><a href="{{ url_for('world_health_news') }}">{{ news_categories[1].title }}</a></h4>
+                <p class="description">{{ news_categories[1].description }} </p>
               </div>
 
               <div class="col-lg-6 col-md-6 box wow fadeInRight">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                <h4 class="title"><a href="{{ url_for('nigeria_news') }}">Nigeria </a></h4>
-                <p class="description"> {{description }}</p>
+                <h4 class="title"><a href="{{ url_for('nigeria_news') }}">{{ news_categories[2].title }}</a></h4>
+                <p class="description">{{ news_categories[2].description }} </p>
               </div>
 
               <div class="col-lg-6 col-md-6 box wow fadeInRight">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                <h4 class="title"><a href="{{ url_for('sa_news') }}">South Africa</a></h4>
-                <p class="description"> {{ description }}</p>
+                <h4 class="title"><a href="{{ url_for('sa_news') }}">{{ news_categories[3].title }}</a></h4>
+                <p class="description">{{ news_categories[3].description }}</p>
               </div>
            
             </div>
@@ -109,10 +111,12 @@
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
             <h3 class="cta-title">Subscribe For free</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="cta-text">  Subscribe for the latest updates in the medical health world, giving you all updates in key areas around health 
+              science including, Coronavirus, technology breakthroughs, ourbreaks, new drug discoveries and more from CDC, WHO etc. 
+            </p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Subcribe</a>
+            <a class="cta-btn align-middle" href="{{ url_for('subcribe') }}">Subcribe</a>
           </div>
         </div>
 
