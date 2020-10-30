@@ -1,0 +1,89 @@
+{% extends 'layouts.html' %}
+
+{% block body %}
+
+  <!-- ======= Intro Section ======= -->
+
+  <section id="intro">
+
+    <div class="intro-text">
+      <h2>Healthy Rocky V.1.0</h2>
+      <p>Register Admin</p>
+      <a href="#about" class="btn-get-started scrollto">Create Account</a>
+
+     
+    </div>
+
+    
+<br></br>
+    <div class="product-screens col-8 text-center">
+
+        <p>
+            {% from "includes/_formhelpers.html" import render_field %}
+                    <form method="POST"  action = ""> 
+              <div class="form-row">
+                <div class="col-6">
+                    <div class="form-group ">
+                  {{ render_field(form.name, class="form-control  btn-get-started") }}
+                        </div>
+                </div>
+                
+                <div class="col-6">
+                    <div class="form-group ">
+                    {{ render_field(form.email, class="form-control  btn-get-started") }}
+                </div>
+            
+                    </div>
+                </div>
+                
+              <div class="form-row">
+                
+                <div class="col-6">
+                    <div class="form-group ">
+                    {{ render_field(form.password, class="form-control  btn-get-started") }}
+                </div>
+                </div>
+            
+            
+                <div class="col-6">
+                    <div class="form-group ">
+                    {{ render_field(form.confirm, class="form-control  btn-get-started") }}
+            
+                    </div>
+                </div>
+                
+            </div>
+                    <div class="">
+                        <input type="submit" class="btn-get-started scrollto " value=" Submit">
+                    </div>
+            
+            </form>
+                  </p>
+
+    </div>
+
+  </section><!-- End Intro Section -->
+
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="section-bg">
+      <div class="container-fluid ">
+        <div class="section-header">
+          <h3 class="section-title">About</h3>
+          <span class="section-divider"></span>
+          <p class="section-description text-center">
+          WE aggregate Medical health  news from credible and established medical news outlets from all over  the world
+              , providing you with fast hand information thats updated every second that counts, trust us with providing you the shortest route to your world 
+              of medical science information delivered at the glimpse, we are not a health news blog, but a First hand Health news aggregator and thats what makes us
+              special for you.
+          </p>
+        </div>
+
+
+      </div>
+    </section><!-- End About Section -->
+
+    
+
+{% endblock %}

@@ -1,0 +1,13 @@
+//
+// Screenreaders
+//
+
+.sr-only,
+.screen-reader-text {
+	@include sr-only();
+}
+
+.sr-only-focusable,
+.screen-reader-text {
+    @include sr-only-focusable();
+}

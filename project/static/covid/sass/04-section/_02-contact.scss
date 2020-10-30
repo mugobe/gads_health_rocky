@@ -1,0 +1,21 @@
+/* ************************
+   04.2: Contact
+   ********************* */
+.contact-form-wrapper {
+  padding: 48px 35px;
+  .btn {
+    padding: 21px 30px;
+    font-size: 14px;
+    font-weight: $bold;
+    margin-right: 20px;
+  }
+}
+
+.form-response {
+  background-color: rgba(254, 169, 132, 0.5);
+  span {
+    display: block;
+    margin-top: 30px;
+    padding: 10px 15px;
+  }
+}

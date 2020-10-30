@@ -1,0 +1,31 @@
+/* ************************
+   03.1: Header
+   ********************* */
+.header {
+    position: relative;
+    .header-fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 20px 0;
+        transition: .3s linear;
+        &.sticky {
+            background-color: #06133E;
+            box-shadow: 0 0 20px rgba(#06133E, .15);
+            @include customMin(992) {
+                padding: 0;
+            }
+        }
+    }
+    .header-btn {
+        padding: 16.5px 29px;
+        @include mobileMd {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+/* ************************
+   02.8: Widget
+   ********************* */
+.widget {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .widget-title {
+    margin-bottom: 30px;
+  }
+  // Lists
+  ul {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 9px;
+      }
+      a {
+        color: inherit;
+        &:hover {
+          @extend %c1;
+        }
+      }
+    }
+  }
+
+  &.widget-about {
+    p {
+      max-width: 230px;
+    }
+  }
+  &.widget-social-icon {
+    li {
+      &:not(:last-child) {
+        margin-right: 5px;
+        margin-bottom: 0;
+      }
+      a {
+        width: 30px;
+        height: 30px;
+        background-color: rgba(#2a5165, 0.5);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        &:hover {
+          @extend %c1-bg;
+        }
+      }
+    }
+  }
+  .text-white {
+    li {
+      a {
+        &:hover {
+          color: #ffffff;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

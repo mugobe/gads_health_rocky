@@ -1,0 +1,201 @@
+/* ************************
+   02.4: Menu
+   ********************* */
+.main-menu {
+  #menu-button {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    display: none;
+    @include tab() {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    span {
+      position: relative;
+    }
+    span,
+    span:after,
+    span:before {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: $white;
+      @extend %trans3;
+    }
+    span:after,
+    span:before {
+      position: absolute;
+      content: "";
+    }
+    span:after {
+      top: 7px;
+    }
+    span:before {
+      top: -7px;
+    }
+    &.menu-opened {
+      span {
+        background-color: transparent !important;
+        &:before {
+          transform: translateY(7px) rotate(45deg);
+        }
+        &:after {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+        &:before,
+        &:after {
+          @extend %c1-bg;
+        }
+      }
+    }
+  }
+
+  .nav {
+    @extend %title_font;
+    font-size: 14px;
+    > li {
+      letter-spacing: 1.2px;
+      padding: 0 15px;
+      > a {
+        text-transform: uppercase;
+        font-weight: $medium;
+        line-height: 85px;
+        color: $white;
+        &.mPS2id-highlight-last {
+          @extend %c1;
+        }
+      }
+      &:hover {
+        > ul {
+          opacity: 1;
+          visibility: visible;
+          top: 100%;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+    li {
+      position: relative;
+      font-weight: $regular;
+      &.current-menu-parent,
+      &.current-menu-item {
+        > a {
+          @extend %c1;
+        }
+      }
+      a {
+        display: block;
+      }
+      ul {
+        position: absolute;
+        left: 0;
+        top: -2000px;
+        opacity: 0;
+        visibility: hidden;
+        background-color: #fff;
+        width: 210px;
+        padding: 15px 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        transform: translate3d(0, -5px, 0);
+        transition: transform 0.3s ease-out;
+        z-index: 9;
+        li {
+          display: block;
+          width: 100%;
+          line-height: 1;
+          &:hover {
+            > ul {
+              opacity: 1;
+              visibility: visible;
+              top: 0;
+              left: 100%;
+              @extend %trans3;
+            }
+          }
+          a {
+            padding: 10px 30px;
+          }
+          ul {
+            top: 0;
+            left: calc(100% + 20px);
+          }
+        }
+      }
+    }
+    @include tab {
+      position: absolute;
+      top: calc(100% + 20px);
+      left: 50%;
+      right: 50%;
+      width: calc(100% - 30px);
+      background: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      max-height: 350px;
+      overflow-y: auto;
+      padding: 15px 0;
+      max-width: 800px;
+      transform: translateX(-50%);
+      z-index: 99999;
+      margin-right: 0;
+      > li {
+        padding: 0;
+        > a {
+          color: $title_color;
+          line-height: 1;
+          padding: 15px 20px;
+        }
+      }
+      .submenu-button {
+        display: block;
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        right: 15px;
+        width: 40px;
+        height: inherit;
+        line-height: 40px;
+        text-align: center;
+        color: initial;
+        &:after {
+          content: ">";
+        }
+        &.submenu-opened {
+          &:after {
+            content: "˅";
+          }
+        }
+      }
+      li {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        ul {
+          position: relative;
+          left: 0;
+          right: auto;
+          top: 0;
+          width: 100%;
+          display: none;
+          padding: 0;
+          opacity: 1;
+          visibility: visible;
+          text-align: left;
+          z-index: 99999;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          ul {
+            position: relative;
+            margin-left: 30px;
+            left: 0 !important;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}

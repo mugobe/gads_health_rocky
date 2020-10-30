@@ -1,11 +1,162 @@
 {% extends 'layouts.html' %}
 
 {% block body %}
-<h1 class="cover-heading">Health Rocky</h1>
-<p class="lead">A simple langing page to the Health Rocky App in the making, Healthy rocky will be  a health information aggregator which uses Health information
-  API's to deliver health resources to people who access it.</p>
-<p class="lead">
-  <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-</p>
+
+  <!-- ======= Intro Section ======= -->
+  <section id="intro">
+
+    <div class="intro-text">
+      <h2>Welcome to Health Rocky</h2>
+      <p>Worlds Fastest Health News Agregator</p>
+      <a href="#about" class="btn-get-started scrollto">About Us</a>
+    </div>
+
+    <div class="product-screens">
+
+      <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
+        <img src="static/img/product-screen-1.png" alt="">
+      </div>
+
+      <div class="product-screen-2 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
+        <img src="static/img/product-screen-2.png" alt="">
+      </div>
+
+      <div class="product-screen-3 wow fadeInUp" data-wow-duration="0.6s">
+        <img src="static/img/product-screen-3.png" alt="">
+      </div>
+
+    </div>
+
+  </section><!-- End Intro Section -->
+
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="section-bg">
+      <div class="container-fluid ">
+        <div class="section-header">
+          <h3 class="section-title">About</h3>
+          <span class="section-divider"></span>
+          <p class="section-description text-center">
+          WE aggregate Medical health  news from credible and established medical news outlets from all over  the world
+              , providing you with fast hand information thats updated every second that counts, trust us with providing you the shortest route to your world 
+              of medical science information delivered at the glimpse, we are not a health news blog, but a First hand Health news aggregator and thats what makes us
+              special for you.
+          </p>
+        </div>
+
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Featuress Section ======= -->
+    <section id="features">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8 offset-lg-4">
+            <div class="section-header wow fadeIn" data-wow-duration="1s">
+              <h3 class="section-title">Health News Categores</h3>
+              <span class="section-divider"></span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5 features-img">
+            <img src="static/img/product-features.png" alt="" class="wow fadeInLeft">
+          </div>
+
+          <div class="col-lg-8 col-md-7 ">
+
+            <div class="row">
+                
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <h4 class="title"><a href="{{ url_for('covid_stats') }}">{{ news_categories[0].title }}</a></h4>
+                <p class="description">{{ news_categories[0].description }} </p>
+              </div>
+
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <h4 class="title"><a href="{{ url_for('world_health_news') }}">{{ news_categories[1].title }}</a></h4>
+                <p class="description">{{ news_categories[1].description }} </p>
+              </div>
+
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <h4 class="title"><a href="{{ url_for('nigeria_news') }}">{{ news_categories[2].title }}</a></h4>
+                <p class="description">{{ news_categories[2].description }} </p>
+              </div>
+
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <h4 class="title"><a href="{{ url_for('sa_news') }}">{{ news_categories[3].title }}</a></h4>
+                <p class="description">{{ news_categories[3].description }}</p>
+              </div>
+           
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Featuress Section -->
+
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Subscribe For free</h3>
+            <p class="cta-text">  Subscribe for the latest updates in the medical health world, giving you all updates in key areas around health 
+              science including, Coronavirus, technology breakthroughs, ourbreaks, new drug discoveries and more from CDC, WHO etc. 
+            </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="{{ url_for('subcribe') }}">Subcribe</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Call To Action Section -->
+
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients">
+      <div class="container">
+
+        <div class="row wow fadeInUp">
+
+          <div class="col-md-2">
+            <img src="static/img/clients/client-1.png" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="static/img/clients/client-2.png" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="static/img/clients/client-3.png" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="static/img/clients/client-4.png" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="static/img/clients/client-5.png" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="static/img/clients/client-6.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Clients Section -->
+
 
 {% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layouts.html' %}
+
+{% block body %}
+    
+    <!-- ======= More Features Section ======= -->
+    <section id="more-features" class="section-bg">
+        <div class="container">
+          <br><br> <br><br>
+          <div class="section-header">
+            <h3 class="section-title">Health News</h3>
+            <span class="section-divider"></span>
+            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          </div>
+  
+          <div class="row">
+  
+
+            {% for article in data %}
+            <div class="col-lg-6">
+              <div class="box wow fadeInLeft">
+                <div class="icon"><i class="ion-ios-stopwatch-outline"></i></div>
+                <h4 class="title"><a href="">{{ article.title }}</a></h4>
+                <p class="description">{{ article.description }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section><!-- End More Features Section -->
+
+      
+{% endblock %}
+  

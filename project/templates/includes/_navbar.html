@@ -1,0 +1,23 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="header-transparent">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="{{ url_for('Index') }}" class="scrollto">H-Rocky</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{{ url_for('Index') }}">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Live Updates</a></li>
+          <li><a href="#call-to-action">Subcribe</a></li>
+          
+          </li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
